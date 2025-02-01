@@ -24,11 +24,10 @@
         grid-template-rows: 80px 1fr;
       }
       nav,
-      menu,
       section,
       main,
       aside {
-        padding: 24px;
+        padding-top: 24px;
       }
 
       nav {
@@ -38,11 +37,47 @@
       }
       menu {
         background-color: #7048e8;
-        color: #fff;
         grid-column: 2 / -1;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
+      button {
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #5f3dc4;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 5px;
+
+        display: inline-block;
+      }
+      button:last-child {
+        background-color: #d6336c;
+        margin-left: auto;
       }
       section {
         background-color: #e9ecef;
+        padding: 40px;
+        overflow: scroll;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .email {
+        background-color: #8899a9;
+        height: 96px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
       }
       aside {
         background-color: #e9ecef;
@@ -51,8 +86,25 @@
   </head>
   <body>
     <nav>Nav</nav>
-    <menu>Menu</menu>
-    <section>Inbox</section>
+    <menu>
+      <button>New</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark Unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+    </section>
     <main>Email View</main>
     <aside>Additional info</aside>
   </body>
